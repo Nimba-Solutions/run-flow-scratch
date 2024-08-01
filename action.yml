@@ -33,18 +33,18 @@ runs:
     steps:
       - uses: actions/checkout@v3
       - name: Set Up CumulusCI
-        uses: nimba-solutions/setup-cumulus@v1
+        uses: nimba-solutions/setup-cumulus@v1.1
         with:
           cumulusci-version: '${{ inputs.cumulusci-version }}'
           sfdx-version: '${{ inputs.sfdx-version }}'
       - name: Authorize Dev Hub
-        uses: nimba-solutions/authorize-org@v1
+        uses: nimba-solutions/authorize-org@v1.1
         with:
           auth-url: '${{ inputs.dev-hub-auth-url }}'
           org-name: dev-hub
           dev-hub: true
       - name: Run Flow
-        uses: nimba-solutions/run-flow@v1
+        uses: nimba-solutions/run-flow@v1.1
         with:
           org-name: '${{ inputs.org-name }}'
           flow-name: '${{ inputs.flow-name }}'
